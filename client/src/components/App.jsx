@@ -1,4 +1,5 @@
 import React from 'react';
+import Chat from './Chat.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -7,7 +8,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div> App component rendering</div>
+      <div>
+        <Chat />
+      </div>
+
     )
   }
 }
