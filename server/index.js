@@ -11,11 +11,10 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 
 socket.on('connect', () => {
-  console.log('yo')
+  console.log('socket on connection: server')
 })
 
 io.on('connection', function (socket) {
-  console.log('hi')
   io.emit('this', { will: 'be received by everyone'});
 
   socket.on('private message', function (from, msg) {
